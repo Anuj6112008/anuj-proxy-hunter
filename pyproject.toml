@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anuj-proxy-hunter"
+version = "1.0.0"
+description = "Free proxy hunter that verifies http/socks4/socks5 exits against the SMM order gateway (Telegram reactions, Instagram likes)"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "anuj" }]
+keywords = ["proxy", "proxies", "socks4", "socks5", "scraper", "telegram", "instagram", "smm"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Internet :: Proxy Servers",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests>=2.25",
+    "PySocks>=1.7",
+]
+
+[project.scripts]
+anuj-proxy-hunter = "proxiech.cli:main"
+proxiech = "proxiech.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Anuj6112008/anuj-proxy-hunter"
+Repository = "https://github.com/Anuj6112008/anuj-proxy-hunter"
+
+[tool.setuptools.packages.find]
+where = ["src"]
